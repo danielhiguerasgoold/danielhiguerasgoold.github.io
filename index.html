@@ -1,9 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js" ng-app="portfolioApp">
   <head>
-    <title>Daniel Higueras Goold Portfolio | Personal projects and information</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Daniel Higueras Goold</title>
+    <meta name="description" content="Daniel Higueras Goold's personal portfolio.">
+
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
   </head>
   <body>
-    <h1>Portfolio dummy</h1>
+  	<div class="off-canvas-wrap" data-offcanvas  ng-controller="ProjectCtrl">
+		<div class="inner-wrap">
+			<nav class="top-bar docs-bar hide-for-small" data-topbar role="navigation">
+			  	<ul class="title-area">
+				    <li class="name">
+				    	<h1><a href="">Daniel Higueras Goold</a></h1>
+				    </li>
+			  	</ul>
+				<section class="top-bar-section">
+				    <ul class="right">
+				    	<li class="divider"></li>
+					    <li>
+					        <a href="#projects" class="">Portfolio&nbsp;<i class="fa fa-book"></i></a>
+					    </li>
+					    <li class="divider"></li>
+					    <li>
+					        <a href="#about" class="">{{'ABOUT' | translate}}&nbsp;<i class="fa fa-user"></i></a>
+					    </li>
+					    <li class="divider"></li>
+					    <li class="has-form">
+							<a href="#contact" class="small button">{{'CONTACT' | translate}}&nbsp;<i class="fa fa-envelope"></i></a>
+						</li>
+				    	<li class="divider"></li>
+				    	<li class="has-dropdown not-click">
+				        	<a href="#" class="">{{'LANG' | translate}}&nbsp;<i class="fa fa-flag"></i></a>
+					        <ul class="dropdown">
+					          	<li><a href="" ng-click="changeLanguage('es')">Español</a></li>
+					          	<li><a href="" ng-click="changeLanguage('en')">English</a></li>
+					        </ul>
+				      	</li>
+				    </ul>
+			  	</section>
+		  	</nav>
+
+			<nav class="tab-bar show-for-small">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href=""><span></span></a>
+				</section>
+
+				<section class="middle tab-bar-section">
+					<h1 class="title">Daniel Higueras Goold</h1>
+				</section>
+			</nav>
+
+			<aside class="left-off-canvas-menu show-for-small">
+				<ul class="off-canvas-list">
+					<li><label>Daniel Higueras Goold</label></li>
+					<li>
+				        <a href="#projects" class="">Portfolio</a>
+				    </li>
+				    <li>
+				        <a href="#about" class="">{{'ABOUT' | translate}}</a>
+				    </li>
+				    <li>
+				        <a href="#contact" class="">{{'CONTACT' | translate}}</a>
+				    </li>
+				    <li class="has-submenu"><a href="">{{'LANG' | translate}}</a>
+			            <ul class="left-submenu">
+			                <li class="back"><a href="">{{'BACK' | translate}}</a></li>
+			                <li><label>{{'LANG' | translate}}</label></li>
+			                <li><a href="" ng-click="changeLanguage('es')">Español</a></li>
+			                <li><a href="" ng-click="changeLanguage('en')">English</a></li>
+			                </li>
+			            </ul>
+			        </li>
+				</ul>
+			</aside>
+
+			<section class="main-section">
+				<div class="row">
+					<div class="large-12 columns">
+						<div ng-view></div> <!--VIEWS INJECTED BY ANGULARJS -->
+					</div>
+				</div>
+			</section>
+			<a class="exit-off-canvas"></a>
+		</div>
+	</div>
+
+	
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/services/projectServices.js"></script>
+    <script type="text/javascript" src="js/controllers/projectCtrl.js"></script>
+
+    <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
+
+	<script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
+	<script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+  	<script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+	<script type="text/javascript" src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+
+	<script type="text/javascript" src="bower_components/nprogress/nprogress.js"></script>
+  	
+  	<script type="text/javascript">
+  		$(document).foundation();
+  	</script>
   </body>
 </html>
