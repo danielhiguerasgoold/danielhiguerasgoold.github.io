@@ -1,10 +1,25 @@
-<h1>{{ projects[0].title }}</h1>
-<ul class="clearing-thumbs" data-clearing>
-	<li><a href="http://placehold.it/500x500"><img src="http://placehold.it/100x100-th"></a></li>
-	<li><a href="http://placehold.it/500x500"><img src="http://placehold.it/100x100-th"></a></li>
-	<li><a href="http://placehold.it/500x500"><img src="http://placehold.it/100x100-th"></a></li>
-</ul>
+<h1>{{ project.title }}&nbsp;<small>Marcadores en tiempo real</small></h1>
+<div class="row">
+	<div class="small-12 large-8 columns">
+		<img class="main th" style="width:500px;height:250px!important;margin-bottom: 10px;" ng-src="{{project.images[0]}}" />
+		<ul class="clearing-thumbs" data-clearing>
+			<li><a href="images/projects/centrolampiluminacion/banner_ldpi.png"><img class="th" width="124px" ng-src="images/projects/centrolampiluminacion/banner_ldpi.png"></a></li>
+			<li><a href="images/projects/centrolampiluminacion/banner_ldpi.png"><img class="th"  width="124px" ng-src="images/projects/centrolampiluminacion/banner_ldpi.png"></a></li>
+			<li><a href="images/projects/centrolampiluminacion/banner_ldpi.png"><img class="th"  width="124px" ng-src="images/projects/centrolampiluminacion/banner_ldpi.png"></a></li>
+		</ul>
+	</div>
+	<div class="small-12 large-4 columns">
+		<h3>{{'PROJECT_DESCRIPTION' | translate}}</h3>
+		<p>{{ project.description[getLanguage()] }}</p>
+		<h3>{{'TAGS' | translate}}</h3>
+		<span ng-repeat="tag in project.tags" class="label">{{ tag }}</span>
+	</div>
+</div>
 
-<script type="text/javascript">
-	$(document).foundation();
+<script>
+	$(".small").click(function(){
+		$(".main").attr('src', $(this).attr('src'));
+	});
+
+	$(document).foundation('clearing', 'reflow');
 </script>

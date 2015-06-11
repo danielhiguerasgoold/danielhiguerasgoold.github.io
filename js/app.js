@@ -1,6 +1,6 @@
 var app = angular.module('portfolioApp', ['ngRoute', 'pascalprecht.translate', 'ngResource']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         // route for the home page
         .when('/', {
@@ -29,7 +29,12 @@ app.config(function($routeProvider) {
         // route for the contact page
         .when('/projects/:id', {
             templateUrl : 'pages/project.html',
-            controller  : 'ProjectCtrl'
+            controller  : 'ProjectCtrl'/*,
+            resolve: {
+                projects: function(Project) {
+                    return ProjectCtrl.
+                }
+            }*/
         })
 
         .otherwise({
@@ -42,13 +47,17 @@ app.config(function ($translateProvider) { //Configure i18n
         ABOUT: 'About me',
         CONTACT: 'Contact',
         LANG: 'Language',
-        BACK: 'Back'
+        BACK: 'Back',
+        PROJECT_DESCRIPTION: 'Project description',
+        TAGS: 'Tags'
     })
     .translations('es', {
         ABOUT: 'Sobre mi',
         CONTACT: 'Contacto',
         LANG: 'Idioma',
-        BACK: 'Atrás'
+        BACK: 'Atrás',
+        PROJECT_DESCRIPTION: 'Descripción del proyecto',
+        TAGS: 'Etiquetas'
     })
     .registerAvailableLanguageKeys(['en', 'es'], {
         'en_US': 'en',

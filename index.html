@@ -9,9 +9,9 @@
     <meta name="description" content="Daniel Higueras Goold's personal portfolio.">
 
     <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="bower_components/nprogress/nprogress.css" />
   </head>
   <body>
   	<div class="off-canvas-wrap" data-offcanvas  ng-controller="ProjectCtrl">
@@ -19,26 +19,26 @@
 			<nav class="top-bar docs-bar hide-for-small" data-topbar role="navigation">
 			  	<ul class="title-area">
 				    <li class="name">
-				    	<h1><a href="">Daniel Higueras Goold</a></h1>
+				    	<h1><a href="#/">Daniel Higueras Goold</a></h1>
 				    </li>
 			  	</ul>
 				<section class="top-bar-section">
 				    <ul class="right">
 				    	<li class="divider"></li>
 					    <li>
-					        <a href="#projects" class="">Portfolio&nbsp;<i class="fa fa-book"></i></a>
+					        <a href="#/projects" class="">Portfolio&nbsp;<i class="fa fa-book"></i></a>
 					    </li>
 					    <li class="divider"></li>
 					    <li>
-					        <a href="#about" class="">{{'ABOUT' | translate}}&nbsp;<i class="fa fa-user"></i></a>
+					        <a href="#/about" class=""><span ng-bind="('ABOUT' | translate)"></span>&nbsp;<i class="fa fa-user"></i></a>
 					    </li>
 					    <li class="divider"></li>
 					    <li class="has-form">
-							<a href="#contact" class="small button">{{'CONTACT' | translate}}&nbsp;<i class="fa fa-envelope"></i></a>
+							<a href="#/contact" class="small button"><span ng-bind="('CONTACT' | translate)"></span>&nbsp;<i class="fa fa-envelope"></i></a>
 						</li>
 				    	<li class="divider"></li>
 				    	<li class="has-dropdown not-click">
-				        	<a href="#" class="">{{'LANG' | translate}}&nbsp;<i class="fa fa-flag"></i></a>
+				        	<a href="" class=""><span ng-bind="('LANG' | translate)"></span>&nbsp;<i class="fa fa-flag"></i></a>
 					        <ul class="dropdown">
 					          	<li><a href="" ng-click="changeLanguage('es')">Español</a></li>
 					          	<li><a href="" ng-click="changeLanguage('en')">English</a></li>
@@ -62,13 +62,13 @@
 				<ul class="off-canvas-list">
 					<li><label>Daniel Higueras Goold</label></li>
 					<li>
-				        <a href="#projects" class="">Portfolio</a>
+				        <a href="#/projects" class="ng-cloak">Portfolio</a>
 				    </li>
 				    <li>
-				        <a href="#about" class="">{{'ABOUT' | translate}}</a>
+				        <a href="#/about" class="ng-cloak">{{'ABOUT' | translate}}</a>
 				    </li>
 				    <li>
-				        <a href="#contact" class="">{{'CONTACT' | translate}}</a>
+				        <a href="#/contact" class="">{{'CONTACT' | translate}}</a>
 				    </li>
 				    <li class="has-submenu"><a href="">{{'LANG' | translate}}</a>
 			            <ul class="left-submenu">
@@ -97,7 +97,7 @@
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 
-    <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angularjs/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="bower_components/angular-translate/angular-translate.js"></script>
     <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>

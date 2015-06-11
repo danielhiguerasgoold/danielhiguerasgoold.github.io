@@ -1,5 +1,7 @@
 app.factory('Project', function($resource){
-	return $resource('http://restservice-projectcafe.rhcloud.com/projects', {}, {
-        query: {method: 'GET', isArray: true}
-    });
+	return {
+		getProjects: $resource('http://restservice-projectcafe.rhcloud.com/projects'),
+
+	    getProject: $resource('http://restservice-projectcafe.rhcloud.com/projects/:id', {id:'@id'})
+	}
 });
