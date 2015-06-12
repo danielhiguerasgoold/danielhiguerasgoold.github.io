@@ -1,4 +1,4 @@
-<h1>{{ project.title }}&nbsp;<small>Marcadores en tiempo real</small></h1>
+<h1>{{ project.title }}&nbsp;<small>{{ project.subtitle[getLanguage()] }}</small></h1>
 <div class="row">
 	<div class="small-12 large-8 columns">
 		<img class="main th" style="width:500px;height:250px!important;margin-bottom: 10px;" ng-src="{{project.images[0]}}" />
@@ -17,9 +17,5 @@
 </div>
 
 <script>
-	$(".small").click(function(){
-		$(".main").attr('src', $(this).attr('src'));
-	});
-
 	$(document).foundation('clearing', 'reflow');
 </script>
