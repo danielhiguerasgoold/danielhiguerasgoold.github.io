@@ -10,9 +10,6 @@ app.controller('ProjectCtrl', function($scope, $translate, $routeParams, Project
     NProgress.start();
     NProgress.set(0.4);
 
-    
-
-
     if($routeParams.id != null) {
         $scope.getProject = Project.getProject.query({id:$routeParams.id}, function(data){
             console.log(JSON.stringify(data[0]));
