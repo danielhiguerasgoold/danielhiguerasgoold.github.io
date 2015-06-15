@@ -1,1 +1,50 @@
 <h1>{{'ABOUT' | translate}}</h1>
+<div class="panel radius">
+	<div class="row">
+		<div class="small-12 large-4 columns">
+			<img class="th radius left" src="images/avatar.png" />
+		</div>
+		<div ng-show="getLanguage() == 'en'" class="small-12 large-8 columns">
+			<p>Hi, my name is Daniel.</p>
+			<p>I'm a software developer currently living in Valencia, Spain. I love everything concerning software development, and enjoy learning new stuff every day.</p>
+			<p>I've worked with all sorts of technologies and application types, from 
+			<span data-tooltip aria-haspopup="true" class="has-tip" title="Java, NodeJS, Python, PHP">server-side applications</span> to <span data-tooltip aria-haspopup="true" class="has-tip" title="HTML5, CSS3, AngularJS, JQuery">client-side applications</span>. I've built <span data-tooltip aria-haspopup="true" class="has-tip" title="Hybrid web app, Android native">mobile apps</span> and used different <span data-tooltip aria-haspopup="true" class="has-tip" title="MongoDB, MySQL, PostgreSQL, Oracle">types of databases</span>. Check out my portfolio to see some of my work.</p>
+			<p>If you're interested in contacting me, don't hesitate. Hit the button below, solve the captcha (to avoid spam) and you will have access to my email address. I'll be more than happy to reply :)</p>
+		</div>
+		<div ng-show="getLanguage() == 'es'" class="small-12 large-8 columns">
+			<p>Hola, mi nombre es Daniel.</p>
+			<p>Soy un desarrollador de software que reside actualmente en Valencia, España. Me apasiona todo lo relacionado con el desarrollo de software, y disfruto aprendiendo cosas nuevas cada día.</p>
+			<p>He trabajado con todo tipo de tecnologías, desde
+			<span data-tooltip aria-haspopup="true" class="has-tip" title="Java, NodeJS, Python, PHP">aplicaciones del lado del servidor</span> hasta <span data-tooltip aria-haspopup="true" class="has-tip" title="HTML5, CSS3, AngularJS, JQuery">aplicaciones del lado del cliente</span>. He desarrollado <span data-tooltip aria-haspopup="true" class="has-tip" title="Aplicación móvil híbrida, Android nativo">aplicaciones móviles</span> y usado diferentes <span data-tooltip aria-haspopup="true" class="has-tip" title="MongoDB, MySQL, PostgreSQL, Oracle">tipos de bases de datos</span>. Mira el portfolio para ver ejemplos de trabajos hechos por mí.</p>
+			<p>Si tienes interés en contactar conmigo, no lo dudes. Dale al botón, resuelve el captcha (para evitar spam) y tendrás acceso a mi correo electrónico. Estaré encantado de contestarte :)</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 large-4 columns text-center">
+			<a class="button" href="http://www.google.com/recaptcha/mailhide/d?k=017zqiDGP6-vox_pF6XA1gfw==&amp;c=r4UVM4DxFqn9wSzE-_pkt2jHGnvn9p1Fe6P4k7Jbxz4=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075017zqiDGP6-vox_pF6XA1gfw\75\75\46c\75r4UVM4DxFqn9wSzE-_pkt2jHGnvn9p1Fe6P4k7Jbxz4\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;">{{'VIEW_ADDRESS' | translate}}</a>
+		</div>
+
+		<div class="large-4 small-12 columns text-center">
+			<span data-tooltip aria-haspopup="true" class="tip-right left" title="GitHub">
+				<a href="https://github.com/danielhiguerasgoold/" style="color:#6f6f6f;" target="_blank">
+					<i style="color:black;" class="fa fa-3x fa-github"></i>
+				</a>
+			</span>
+			<span data-tooltip aria-haspopup="true" class="tip-right" title="LinkedIn">
+				<a href="https://www.linkedin.com/" target="_blank">
+					<i style="color:#0077b5;" class="fa fa-3x fa-linkedin"></i>
+				</a>
+			</span>
+			<span data-tooltip aria-haspopup="true" class="tip-right right" title="StackOverflow">
+				<a href="http://stackoverflow.com/users/549003/d-higueras" target="_blank">
+					<i style="color:#FF9900;" class="fa fa-3x fa-stack-overflow"></i>
+				</a>
+			</span>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).foundation('tooltip', 'reflow');
+</script>

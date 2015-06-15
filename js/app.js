@@ -21,12 +21,6 @@ app.config(function($routeProvider, $locationProvider) {
         })
 
         // route for the contact page
-        .when('/contact', {
-            templateUrl : 'pages/contact.html',
-            controller  : 'ProjectCtrl'
-        })
-
-        // route for the contact page
         .when('/projects/:id', {
             templateUrl : 'pages/project.html',
             controller  : 'ProjectCtrl'/*,
@@ -49,7 +43,8 @@ app.config(function ($translateProvider) { //Configure i18n
         LANG: 'Language',
         BACK: 'Back',
         PROJECT_DESCRIPTION: 'Project description',
-        TAGS: 'Tags'
+        TAGS: 'Tags',
+        VIEW_ADDRESS: 'View my email address'
     })
     .translations('es', {
         ABOUT: 'Sobre mi',
@@ -57,7 +52,8 @@ app.config(function ($translateProvider) { //Configure i18n
         LANG: 'Idioma',
         BACK: 'Atrás',
         PROJECT_DESCRIPTION: 'Descripción del proyecto',
-        TAGS: 'Etiquetas'
+        TAGS: 'Etiquetas',
+        VIEW_ADDRESS: 'Ver mi dirección de correo'
     })
     .registerAvailableLanguageKeys(['en', 'es'], {
         'en_US': 'en',
